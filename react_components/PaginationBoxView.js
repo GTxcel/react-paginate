@@ -336,6 +336,7 @@ export default class PaginationBoxView extends Component {
             role="button"
             onKeyPress={this.handlePreviousPage}
             aria-disabled={previousAriaDisabled}
+            aria-label="previous"
           >
             {previousLabel}
           </a>
@@ -352,6 +353,7 @@ export default class PaginationBoxView extends Component {
             role="button"
             onKeyPress={this.handleNextPage}
             aria-disabled={nextAriaDisabled}
+            aria-label="next"
           >
             {nextLabel}
           </a>
