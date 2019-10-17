@@ -320,6 +320,7 @@ var PaginationBoxView = function (_Component) {
               tabIndex: '0',
               role: 'button',
               onKeyPress: this.handlePreviousPage,
+              'aria-label': 'previous',
               'aria-disabled': previousAriaDisabled
             },
             previousLabel
@@ -338,6 +339,7 @@ var PaginationBoxView = function (_Component) {
               tabIndex: '0',
               role: 'button',
               onKeyPress: this.handleNextPage,
+              'aria-label': 'next',
               'aria-disabled': nextAriaDisabled
             },
             nextLabel
