@@ -304,6 +304,7 @@ var PaginationBoxView = function (_Component) {
 
       var previousAriaDisabled = selected === 0 ? 'true' : 'false';
       var nextAriaDisabled = selected === pageCount - 1 ? 'true' : 'false';
+      var ariaLabelBuilder = this.props.ariaLabelBuilder ? this.props.ariaLabelBuilder : (() => undefined);
 
       return _react2.default.createElement(
         'ul',
@@ -320,7 +321,7 @@ var PaginationBoxView = function (_Component) {
               tabIndex: '0',
               role: 'button',
               onKeyPress: this.handlePreviousPage,
-              'aria-label': 'previous',
+              'aria-label': ariaLabelBuilder('previous') || 'previous',
               'aria-disabled': previousAriaDisabled
             },
             previousLabel
@@ -339,7 +340,7 @@ var PaginationBoxView = function (_Component) {
               tabIndex: '0',
               role: 'button',
               onKeyPress: this.handleNextPage,
-              'aria-label': 'next',
+              'aria-label': ariaLabelBuilder('next') || 'next',
               'aria-disabled': nextAriaDisabled
             },
             nextLabel
