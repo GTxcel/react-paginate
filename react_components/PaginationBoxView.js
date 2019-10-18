@@ -324,7 +324,8 @@ export default class PaginationBoxView extends Component {
 
     const previousAriaDisabled = selected === 0 ? 'true' : 'false';
     const nextAriaDisabled = selected === pageCount - 1 ? 'true' : 'false';
-
+    const ariaLabelBuilder = this.props.ariaLabelBuilder ? this.props.ariaLabelBuilder : (() => undefined);
+    
     return (
       <ul className={containerClassName}>
         <li className={previousClasses}>
@@ -335,8 +336,8 @@ export default class PaginationBoxView extends Component {
             tabIndex="0"
             role="button"
             onKeyPress={this.handlePreviousPage}
+            aria-label={ariaLabelBuilder('previous') || 'previous'}
             aria-disabled={previousAriaDisabled}
-            aria-label="previous"
           >
             {previousLabel}
           </a>
@@ -352,8 +353,8 @@ export default class PaginationBoxView extends Component {
             tabIndex="0"
             role="button"
             onKeyPress={this.handleNextPage}
+            aria-label={ariaLabelBuilder('next') || 'next'}
             aria-disabled={nextAriaDisabled}
-            aria-label="next"
           >
             {nextLabel}
           </a>
