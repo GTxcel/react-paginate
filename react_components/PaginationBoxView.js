@@ -336,7 +336,7 @@ export default class PaginationBoxView extends Component {
             tabIndex="0"
             role="button"
             onKeyPress={this.handlePreviousPage}
-            aria-label={ariaLabelBuilder('previous') || 'previous'}
+            aria-label={ariaLabelBuilder('previous') || 'Previous Page'}
             aria-disabled={previousAriaDisabled}
           >
             {previousLabel}
@@ -353,7 +353,7 @@ export default class PaginationBoxView extends Component {
             tabIndex="0"
             role="button"
             onKeyPress={this.handleNextPage}
-            aria-label={ariaLabelBuilder('next') || 'next'}
+            aria-label={ariaLabelBuilder('next') || 'Next Page'}
             aria-disabled={nextAriaDisabled}
           >
             {nextLabel}
