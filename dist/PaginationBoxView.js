@@ -321,7 +321,7 @@ var PaginationBoxView = function (_Component) {
               tabIndex: '0',
               role: 'button',
               onKeyPress: this.handlePreviousPage,
-              'aria-label': ariaLabelBuilder('previous') || 'previous',
+              'aria-label': ariaLabelBuilder('previous') || 'Previous Page',
               'aria-disabled': previousAriaDisabled
             },
             previousLabel
@@ -340,7 +340,7 @@ var PaginationBoxView = function (_Component) {
               tabIndex: '0',
               role: 'button',
               onKeyPress: this.handleNextPage,
-              'aria-label': ariaLabelBuilder('next') || 'next',
+              'aria-label': ariaLabelBuilder('next') || 'Next Page',
               'aria-disabled': nextAriaDisabled
             },
             nextLabel
